@@ -86,7 +86,7 @@ class Mysql extends Connection
             $tableName = '`' . $tableName . '`';
         }
 
-        $sql = 'SHOW COLUMNS FROM ' . $tableName;
+        $sql = 'SHOW FULL COLUMNS FROM  ' . $tableName;
         $pdo = $this->query($sql, [], false, true);
         $result = $pdo->fetchAll(PDO::FETCH_ASSOC);
         $info = [];
